@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qing Mao Mountain — 3D Environment</title>
+    <meta name="description" content="Explorable procedural 3D environment of Qing Mao Mountain (Gu Yue, Xiong, and Bai villages, Spear Bamboo Forest, and underground caverns)." />
+    <meta property="og:title" content="Qing Mao Mountain — 3D Environment" />
+    <meta property="og:description" content="Explorable procedural 3D environment of Qing Mao Mountain (Gu Yue, Xiong, and Bai villages, Spear Bamboo Forest, and underground caverns)." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: #0d1830;
+        color: #f4f4ee;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        user-select: none;
+      }
+      #canvas-container {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+      }
+      #canvas-container canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      #hud-root {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        pointer-events: none;
+      }
+      .hud-interactive {
+        pointer-events: auto;
+      }
+      .tabular-nums {
+        font-family: 'JetBrains Mono', monospace;
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body data-state="exploring" data-camera="2" data-night="false" data-cutaway="false">
+    <div id="canvas-container" data-testid="webgl-canvas-container"></div>
+    <div id="hud-root"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

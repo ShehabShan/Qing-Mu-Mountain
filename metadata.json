@@ -1,0 +1,8 @@
+{
+  "name": "Qing Mao Mountain — 3D Environment",
+  "description": "Explorable procedural 3D environment of Qing Mao Mountain (Gu Yue, Xiong, and Bai villages, Spear Bamboo Forest, and underground caverns).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
